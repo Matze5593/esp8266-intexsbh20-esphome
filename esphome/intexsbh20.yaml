@@ -1,0 +1,25 @@
+esphome:
+  name: purespa
+  platform: ESP8266
+  board: d1_mini
+  platformio_options:
+    build_flags:
+      - -DMODEL_SB_H20
+
+external_components:
+  - source: ./custom_components
+
+wifi:
+  ssid: "YOUR_SSID"
+  password: "YOUR_PASSWORD"
+
+logger:
+
+api:
+
+ota:
+
+custom_component:
+  - lambda: |-
+      auto spa = new PureSpaComponent();
+      return {spa};
