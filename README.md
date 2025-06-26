@@ -4,14 +4,14 @@
 
 ### Table of contents
 
-[1. Compatibility](#compatibility)  
-[2. Introduction](#introduction)  
-[3. Motivation](#motivation)  
-[4. Hacking the SB-H20](#hacking-the-sb-h20)  
-[5. Building your own WiFi remote control](#building-your-own-wifi-remote-control)  
-[6. Contributing](#contributing)  
-[7. Licenses and Credits](#licenses-and-credits)
-
+[1. Compatibility](#compatibility)
+[2. Introduction](#introduction)
+[3. Motivation](#motivation)
+[4. Hacking the SB-H20](#hacking-the-sb-h20)
+[5. Building your own WiFi remote control](#building-your-own-wifi-remote-control)
+[6. ESPHome Integration](#esphome-integration)
+[7. Contributing](#contributing)
+[8. Licenses and Credits](#licenses-and-credits)
 
 ## Compatibility
 
@@ -428,10 +428,16 @@ find your pool cover blown off because a guest turned on the bubbles while the
 cover was closed.
 
 One up would be to use encryption for the MQTT communication but the MQTT
+
 client library currently does not support it.
 
 
+## ESPHome Integration
+
+An experimental ESPHome configuration is available in the [esphome](esphome) folder. It wraps the original firmware in a custom component so it can run within ESPHome. Use `esphome run esphome/intexsbh20.yaml` to build and upload.
+
 ## Contributing
+
 
 If you want to contribute to this project, please have look at the 
 [contributing guide](CONTRIBUTING.md) first. It will provide guidelines for 
